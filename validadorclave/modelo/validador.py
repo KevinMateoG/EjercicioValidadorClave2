@@ -45,7 +45,7 @@ class ReglaValidacionGanimedes(ReglaValidacion):
 
 
 class ReglaValidacionCalisto(ReglaValidacion):
-    def contiene_calisto(self, clave: str) -> bool:
+    def contiene_calisto(self, clave: str):
         calisto = {"C": "a",
                  "A": "b",
                  "l": "c",
