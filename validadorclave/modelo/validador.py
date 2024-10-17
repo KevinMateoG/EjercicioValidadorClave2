@@ -6,7 +6,6 @@ from validadorclave.modelo.errores import NoCumpleLongitudMinimaError, NoTieneLe
 
 
 class ReglaValidacion(ABC):
-
     def __init__(self, _longitud_esperada: int):
         self._longitud_esperada: int = _longitud_esperada
 
@@ -47,9 +46,14 @@ class ReglaValidacionGanimedes(ReglaValidacion):
 
 class ReglaValidacionCalisto(ReglaValidacion):
     def contiene_calisto(self, clave: str) -> bool:
-        calisto={"A": "a",
-                 "B": "b",
-                 }
+        calisto = {"C": "a",
+                 "A": "b",
+                 "l": "c",
+                "I":"i",
+                   "S": "s",
+                   "T": "t",
+                   "O": "o"}
+        pass
 
 class Validador(ReglaValidacion):
     def __init__(self, regla: ReglaValidacion, _longitud_esperada: int):
